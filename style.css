@@ -1,0 +1,109 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --main-bg-color: rgb(56, 56, 56);
+    --bg-color: rgb(150, 150, 150);
+    --main-color: rgb(0, 0, 0);
+    --secondary-color: blue;
+    --width: 100%;
+    --font-family: Arial, Helvetica, sans-serif;
+    --font-color: black;
+}
+
+header
+{
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    width: var(--width);
+    height: 25%;
+    padding: 10px;
+}
+
+main
+{
+    width: var(--width);
+    height: 125%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--bg-color);
+    border: solid black; 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-content: center;
+}
+
+footer
+{
+    width: var(--width);
+    height: 10%;
+    background-color: var(--main-bg-color);
+}
+
+.f128
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(img/128.png);
+    background-position: center;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.f147
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(img/147.png);
+    background-position: center;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.f600
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(img/600.png);
+    background-position: center;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+h2
+{
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+p
+{
+    background-color: rgba(150, 150, 150, 0.801);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+a
+{
+    margin: 0;
+    padding: 0;
+}
