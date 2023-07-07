@@ -114,20 +114,50 @@ a {
     padding: 0;
 }
 
-@media (min-width: 320px) and (max-width: 1200px) {
 
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+@mixin MediaQuery($medida) {
+  $valor: map-get($breakpoints, $medida);
+  @media screen and (min-width: $valor) {
+    @content;
+  }
+}
+
+body {
+  @include MediaQuery('xs') {
     main {
-        grid-template-columns: 100%;
-        height: 100%;
+      background-color: aqua;
     }
+  }
 
-    header
-    {
-        height: 10%;
-        padding: 5%;
+  @include MediaQuery('sm') {
+    main {
+      background-color: black;
     }
+  }
 
-    .f128, .f147, .f600 {
-        height: 100%;
+  @include MediaQuery('md') {
+    main {
+      background-color: darkgreen;
     }
+  }
+
+  @include MediaQuery('lg') {
+    main {
+      background-color: coral;
+    }
+  }
+
+  @include MediaQuery('xl') {
+    main {
+      background-color: crimson;
+    }
+  }
 }
