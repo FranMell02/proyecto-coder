@@ -29,21 +29,39 @@ a:hover {
     color: white;
 }
 
-.button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: rgba(34, 34, 34, 0.25);
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 100%;
-    transition: background-color 0.3s;
+.boton 
+{
+  overflow: hidden;
+padding: 20px 50px;
+position: relative;
+text-decoration: none;
+color: black;
+letter-spacing: 10px;
 }
-
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+  
+.boton 
+{
+z-index: 1;
+}
+  
+.boton::before 
+{
+content: "";
+position: absolute;
+width: 100%;
+top: -200%;
+transition: all 0.65s ease;
+height: 200%;
+left: 0;
+background-color: $main-bg-color;
+border-radius: 50%;
+z-index: -1;
+}
+  
+.boton:hover::before 
+{
+top: 0;
+border-radius: 0%;
 }
 
 main {
