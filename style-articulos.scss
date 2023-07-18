@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$main-bg-color : rgb(56, 56, 56);
+$bg-color: rgb(150, 150, 150);
+$main-color: rgb(0, 0, 0);
+$secondary-color: blue;
+$width: 100%;
+$height: 220px;
+$font-family: Arial, Helvetica, sans-serif;
+$font-color: black;
+
+
+//Header
+
+header {
+    background-color: $main-bg-color;
+    width: $width;
+    height: $height;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Main
+
+main {
+    width: $width;
+    height: 150%;
+    background-color: $bg-color;
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 42% auto auto;
+    justify-content: center;
+}
+
+a:link {
+    color: black;
+    text-decoration:none;
+}
+
+a:hover {
+    color: white;
+}
+
+.historia
+{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 150px;
+}
+
+.versiones
+{
+    background-color: coral;
+}
+
+.motorizaciones
+{
+    background-color: cornflowerblue;
+}
+
+.imagenes
+{
+    width: 510px;
+    height: 380px;
+}
+
+h2 {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+}
+
+//Footer
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: $main-bg-color;
+}
+
+.cop {
+    color: $bg-color;
+    background-color: $main-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//--------------------
+
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+@mixin MediaQuery($medida) {
+  $valor: map-get($breakpoints, $medida);
+  @media screen and (min-width: $valor) {
+    @content;
+  }
+}
+
+body {
+  @include MediaQuery('xs') 
+  {
+   
+  }
+
+  @include MediaQuery('sm') 
+  {
+
+  }
+
+  @include MediaQuery('md') 
+  {
+   
+  }
+
+  @include MediaQuery('lg') 
+  {
+   
+  }
+
+  @include MediaQuery('xl') 
+  {
+    
+  }
+}
